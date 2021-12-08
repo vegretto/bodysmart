@@ -1,0 +1,96 @@
+.training-types {
+  position: relative;
+  overflow-x: hidden;
+  padding: 50px 0 100px;
+  background-color: $gray-bg;
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0 50px;
+  }
+  &__img {
+    position: absolute;
+    top: 50px;
+    right: calc(50% - 730px);
+    @media (max-width: 767px) {
+      position: static;
+      right: auto;
+      top: auto;
+      order: 1;
+      width: 100%;
+      height: auto;
+    }
+    img {
+      @media (max-width: 767px) {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        max-width: 100%;
+      }
+    }
+  }
+  .h2-common {
+    margin-bottom: 45px;
+    @media (max-width: 600px) {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  &__inner {
+    max-width: 840px;
+    position: relative;
+    z-index: 2;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      margin: 0 0 25px 0;
+    }
+  }
+  &__item {
+    padding: 20px 25px;
+    border-radius: 30px;
+    background: $dark-purple-gradient;
+    margin: 5px;
+    color: $white;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      margin: 0 0 5px 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &--gray {
+      background: $gray-gradient;
+    }
+  }
+  &__title {
+    font-family: "Forum", serif;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media (max-width: 600px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    @media (max-width: 600px) {
+      font-size: 14px;
+      line-height: 18x;
+    }
+  }
+  br {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+}

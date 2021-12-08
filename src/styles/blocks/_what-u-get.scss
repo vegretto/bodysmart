@@ -1,0 +1,101 @@
+.what-u-get {
+  position: relative;
+  padding: 90px 0 190px;
+  background-color: $gray-bg;
+  border-radius: 0 0 60px 60px;
+  @media (max-width: 767px) {
+    padding: 50px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .bg-wrapper {
+    width: 1200px;
+    height: 860px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    z-index: 1;
+    @media (max-width: 767px) {
+      width: auto;
+      height: auto;
+      position: static;
+      transform: none;
+      order: 1;
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  .h2-common {
+    max-width: 390px;
+    margin-bottom: 35px;
+    @media (max-width: 767px) {
+      text-align: center;
+      margin: 0 auto 20px;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px 0;
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+      margin: 0 0 30px 0;
+    }
+  }
+  &__item-wrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-basis: 50%;
+    display: flex;
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+      margin: 0 0 10px 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child(2n) {
+      .what-u-get__item {
+        margin-left: auto;
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(5) {
+      padding-left: 160px;
+      @media (max-width: 991px) {
+        padding-left: 0;
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(6) {
+      padding-right: 160px;
+      @media (max-width: 991px) {
+        padding-right: 0;
+      }
+    }
+  }
+  &__item {
+    background: $dark-purple-gradient;
+    padding: 25px;
+    border-radius: 30px;
+    color: $white;
+    font-size: 18px;
+    line-height: 27px;
+    flex-basis: 340px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+      justify-content: flex-start;
+    }
+  }
+}

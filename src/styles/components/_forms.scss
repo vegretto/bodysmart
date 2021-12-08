@@ -1,0 +1,248 @@
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-common {
+  background: rgba(255, 255, 255, 0.3);
+  border: 0;
+  border-radius: 7px;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 15px;
+  width: 100%;
+  color: $white;
+  &::placeholder {
+    color: $middle-gray-bg;
+    transition: .1s ease-in-out;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &:focus {
+    &::placeholder {
+      color: transparent;
+      transition: .1s ease-in-out;
+    }
+  }
+}
+
+.error-message {
+  color: #FF6162;
+  display: none;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 2px;
+}
+
+.radio-common {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-radio-label {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 60px;
+  color: $white;
+  border: 1px solid $white;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  white-space: nowrap;
+  text-align: center;
+  &.checked {
+    background: $light-purple;
+    border-color: $purple;
+    transition: .2s ease-in-out;
+  }
+}
+
+.fg-wrapper {
+  display: flex;
+  &--two-childs {
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    .form-group {
+      flex-basis: 50%;
+      max-width: 50%;
+      margin-right: 10px;
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.common-form {
+  background: $dark-purple-gradient;
+  border-radius: 40px;
+  color: $white;
+  padding: 40px 100px 50px;
+  max-width: 840px;
+  margin: 0 auto;
+  @media (max-width: 991px) {
+    padding: 30px 50px 40px;
+  }
+  @media (max-width: 600px) {
+    padding: 40px 15px;
+  }
+  &--main {
+    textarea {
+      height: 130px;
+    }
+  }
+  &__bottom-wrapper {
+    display: flex;
+    padding: 0 40px;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      padding: 0;
+      align-items: center;
+    }
+    .form-group--checkbox {
+      flex-basis: 200px;
+      margin-right: 15px;
+      margin-bottom: 0;
+      @media (max-width: 600px) {
+        order: -1;
+        flex-basis: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+        justify-content: center;
+      }
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 300;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &--modal {
+    overflow-y: auto;
+    max-height: 100vh;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $gray-bg;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $purple;
+    }
+    .common-form__inner {
+      max-width: 320px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form-group {
+        width: 100%;
+      }
+      .form-group--checkbox {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.label-common {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group--textarea {
+  textarea {
+    resize: none;
+  }
+}
+
+.form-group--checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  cursor: pointer;
+  flex-direction: row;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+  }
+
+  .custom-cb-badge {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+    &:before {
+      @include pseudo(20px, 20px);
+      background: rgba(255, 255, 255, 0.3);
+      transition: 0.2s ease-in-out;
+      border-radius: 1px;
+    }
+
+    &:after {
+      @include pseudo(14px, 8px);
+      border-left: 3px solid $purple;
+      border-bottom: 3px solid $purple;
+      left: 3px;
+      top: 4px;
+      transform: rotate(-45deg);
+      opacity: 0;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  label {
+    font-size: 12px;
+    line-height: 18px;
+    color: $white;
+    cursor: pointer;
+    pointer-events: none;
+    margin-bottom: 0;
+    a {
+      font-size: 12px;
+      line-height: 18px;
+      color: $white;
+      text-decoration-color: $white;
+    }
+  }
+
+  &.checked {
+    .custom-cb-badge {
+      &:before {
+        background: $white;
+        transition: 0.2s ease-in-out;
+      }
+      &:after {
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+}

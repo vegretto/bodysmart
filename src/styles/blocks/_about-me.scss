@@ -1,0 +1,126 @@
+.about-me {
+  padding: 145px 0 100px;
+  margin: 50px 0;
+  background: $purple-gradient;
+  border-radius: 60px 60px 0 0;
+  position: relative;
+  color: $white;
+  @media (max-width: 767px) {
+    padding: 70px 0 50px;
+    margin: 25px 0 0;
+    border-radius: 0;
+  }
+  &__img {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: 767px) {
+      position: static;
+      transform: none;
+      align-self: center;
+      margin-bottom: 30px;
+    }
+    img {
+      object-fit: contain;
+      @media (max-width: 767px) {
+        max-width: 400px;
+        width: auto;
+        height: auto;
+      }
+      @media (max-width: 600px) {
+        max-width: 100%;
+      }
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  }
+  &__left {
+    flex-basis: 400px;
+    margin-right: 100px;
+    @media (max-width: 767px) {
+      flex-basis: auto;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .socials {
+    margin-bottom: 20px;
+  }
+  &__job {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 48px;
+    margin-bottom: 10px;
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 5px;
+    }
+  }
+  &__name {
+    font-family: "Forum", serif;
+    font-size: 48px;
+    line-height: 55px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @media (max-width: 767px) {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 10px;
+    }
+  }
+  &__right {
+    flex-basis: 410px;
+    @media (max-width: 767px) {
+      flex-basis: auto;
+    }
+  }
+  &__quotes {
+    display: flex;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  &__quotes-item {
+    flex-basis: calc(50% - 20px);
+    background-color: $white;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 27px;
+    color: $black;
+    margin-right: 40px;
+    @media (max-width: 767px) {
+      margin-right: 0;
+      margin-bottom: 25px;
+      flex-basis: auto;
+    }
+    &:last-child {
+      margin-right: 0;
+      @media (max-width: 767px) {
+        margin-bottom: 0;
+      }
+    }
+    &--left {
+      border-top-right-radius: 0;
+    }
+    &--right {
+      border-top-left-radius: 0;
+    }
+  }
+}

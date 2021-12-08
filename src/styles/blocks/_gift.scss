@@ -1,0 +1,70 @@
+.gift {
+  position: relative;
+  overflow-x: hidden;
+  padding: 80px 0;
+  &__img {
+    position: absolute;
+    right: calc(50% - 750px);
+    top: 50%;
+    transform: translateY(-50%);
+    @media (max-width: 991px) {
+      position: static;
+      transform: none;
+    }
+    img {
+      object-fit: contain;
+      height: auto;
+    }
+  }
+  &__content {
+    padding: 30px 550px 65px 70px;
+    background-color: $purple;
+    border-radius: 40px;
+    color: $white;
+    @media (max-width: 991px) {
+      padding: 40px 30px;
+    }
+    @media (max-width: 767px) {
+      padding: 25px 20px;
+    }
+  }
+  &__content-inner {
+    max-width: 525px;
+    @media (max-width: 991px) {
+       max-width: 100%;
+    }
+  }
+  &__icon {
+    margin-bottom: 5px;
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 55px;
+    font-family: "Forum", serif;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    @media (max-width: 767px) {
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  .common-btn {
+    @media (max-width: 991px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}

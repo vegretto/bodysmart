@@ -1,0 +1,45 @@
+//fancybox-fix: Позволяет импортировать jquery.fancybox.min.css напрямую в scss без ошибок при сборке.
+@import "helpers/fancybox-fix";
+
+//libs
+@import "libs/normalize";
+@import "libs/swiper.min";
+@import "libs/jquery.fancybox.min";
+//@import "libs/easy-autocomplete.min";
+//@import "libs/datepicker.min";
+
+//helpers
+@import "helpers/mixins";
+
+// base
+@import "base/variables";
+@import "base/fonts";
+@import "base/general";
+@import "base/common";
+@import "base/modals";
+
+// components
+@import "components/header";
+@import "components/footer";
+@import "components/forms";
+@import "components/mobile-menu";
+@import "blocks/main_section";
+@import "blocks/messages";
+@import "blocks/training-types";
+@import "blocks/time-section";
+@import "blocks/target-audience";
+@import "blocks/what-u-get";
+@import "blocks/steps";
+@import "blocks/gift";
+@import "blocks/process";
+@import "blocks/free-lessons";
+@import "blocks/subscriptions";
+@import "blocks/about-me";
+@import "blocks/results";
+@import "blocks/testimonials";
+@import "blocks/faq";
+@import "blocks/form-section";
+@import "blocks/articles";
+
+// pages
+@import "pages/index";

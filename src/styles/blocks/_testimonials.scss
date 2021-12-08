@@ -1,0 +1,42 @@
+.testimonials {
+  padding: 95px 0 175px;
+  @media (max-width: 767px) {
+    padding: 30px 0 90px;
+  }
+  .h2-common {
+    padding: 0 15px;
+    @media (max-width: 991px) {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.testimonials-slider {
+  width: 100%;
+  overflow: hidden;
+  &__slide {
+    width: 340px;
+    height: 600px;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    @media (max-width: 600px) {
+      width: 290px;
+      height: 515px;
+    }
+    video {
+      object-fit: cover;
+    }
+  }
+  &__name {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $white;
+  }
+}

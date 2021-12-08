@@ -1,0 +1,17 @@
+header.header
+    ._container.container
+        ._inner
+            ._logo-wrapper
+                a(href="#")._logo
+                    +icon('logo')
+                ._descriptor ваш онлайн-зал для души и тела
+            nav.main-nav
+                .main-nav__item.js-scroll-to(data-scroll="#nav-1") О проекте
+                .main-nav__item.active.js-scroll-to(data-scroll="#nav-2") О занятиях
+                .main-nav__item.js-scroll-to(data-scroll="#nav-3") Тарифы
+                .main-nav__item.js-scroll-to(data-scroll="#nav-4") Блог
+                .main-nav__item.js-scroll-to(data-scroll="#nav-5") FAQ
+            .common-btn-wrapper
+                btn.common-btn.js-open-modal(data-modal="modal-subscribe") Бесплатный доступ к урокам
+            .mobile-menu-toggle.js-open-mobile-menu
+                +icon('menu')

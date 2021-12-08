@@ -1,0 +1,194 @@
+.main-section {
+  position: relative;
+  padding: 90px 0 130px;
+  background: $purple-gradient;
+  color: $white;
+  @media (max-width: 1365px) {
+    overflow-x: hidden;
+  }
+  @media (max-width: 767px) {
+    padding: 10px 0 0;
+  }
+  .bg-wrapper {
+    width: 900px;
+    height: 775px;
+    right: 0;
+    left: auto;
+    top: 0;
+    z-index: 1;
+    @media (max-width: 1365px) {
+      right: calc(50% - 800px);
+    }
+    @media (max-width: 767px) {
+      width: auto;
+      height: auto;
+      right: 0;
+    }
+    img {
+      object-fit: contain;
+      @media (max-width: 767px) {
+        width: 360px;
+        height: 586px;
+      }
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  &__top-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    .h1-common {
+      max-width: 400px;
+      margin-right: 190px;
+      @media (max-width: 767px) {
+        order: 1;
+        margin-right: 0;
+      }
+      @media (max-width: 500px) {
+        max-width: 245px;
+      }
+    }
+  }
+  &__top-text {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    max-width: 190px;
+    flex-basis: 190px;
+    position: absolute;
+    z-index: 2;
+    right: 630px;
+    top: 120px;
+    @media (max-width: 1365px) {
+      right: calc(50% - 200px);
+    }
+    @media (max-width: 767px) {
+      position: static;
+      font-size: 18px;
+      line-height: 24px;
+      max-width: 210px;
+      flex-basis: auto;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+  &__workout-types {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 30px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+      max-width: none;
+      width: auto;
+      align-items: flex-start;
+      margin-bottom: -45px;
+    }
+  }
+  &__workout-types-item {
+    padding: 25px 80px 25px 30px;
+    border: 1px solid $white;
+    border-radius: 30px;
+    position: relative;
+    right: 20px;
+    flex-basis: 33%;
+    background-color:  #CBBEDA;
+    @media (max-width: 991px) {
+      padding: 25px 30px 50px 30px;
+      max-width: 250px;
+      flex-basis: auto;
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      padding: 20px 20px 50px 20px;
+    }
+    &:first-child {
+      right: 0;
+    }
+    &:nth-child(2) {
+      right: 45px;
+      @media (max-width: 991px) {
+        right: 0;
+        bottom: 35px;
+      }
+    }
+    &:nth-child(3) {
+      right: 90px;
+      padding-right: 30px;
+      @media (max-width: 991px) {
+        right: 0;
+        bottom: 70px;
+      }
+    }
+  }
+  &__workout-types-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  &__workout-types-text {
+    font-size: 18px;
+    line-height: 30px;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  .common-btn {
+    margin-bottom: 150px;
+    @media (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+  }
+  &__advantages {
+    background-color: $white;
+    border-radius: 30px;
+    display: flex;
+    padding: 55px 40px;
+    margin: 0 -15px;
+    @media (max-width: 1199px) {
+      flex-wrap: wrap;
+      padding: 25px 20px;
+    }
+    @media (max-width: 767px) {
+      border-radius: 0;
+    }
+  }
+  &__advantages-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 15px;
+    @media (max-width: 1199px) {
+      flex-basis: calc(50% - 30px);
+      margin: 30px 15px;
+    }
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+      margin: 20px 0;
+      align-items: center;
+    }
+  }
+  &__advantages-icon {
+    margin-right: 12px;
+    svg {
+      width: 55px;
+      height: 50px;
+    }
+  }
+  &__advantages-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+  }
+}

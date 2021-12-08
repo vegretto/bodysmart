@@ -1,0 +1,13 @@
+.modal.modal--buy#modal-buy
+    .modal__inner
+        .modal__close-cross.js-close-modal
+            +icon('close')
+        form.common-form.-modal
+            h3.h3-common.txt-center Купить абонемент на 6 месяцев
+            ._subtitle Заполните форму и мы перенаправим вас на платежный сервис
+            ._inner
+                +form-group('text', 'ms-name', 'Представьтесь пожалуйста:', true, 'input-common', 'label-common', 'Твое имя*')
+                +form-group('tel', 'ms-tel', 'Номер телефона, чтобы мы могли вам перезвонить:', true, 'input-common', 'label-common', '+7(___) ___-__-__*')
+                +form-group('email', 'ms-mail', 'Email:', true, 'input-common', 'label-common', 'Email:')
+                +form-group-checkbox-allow('q-allow', true, true,'input-common', 'label-common')
+                btn.common-btn(type="submit") Перейти к оплате

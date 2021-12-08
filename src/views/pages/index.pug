@@ -1,0 +1,477 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    main.main-wrapper
+        section.main-section
+                .bg-wrapper
+                    +pictureAdaptive('ms-bg', 'png', 901, 775)
+                ._top-text Получите здоровое тело не выходя из дома
+                ._container.container
+                    ._top-wrapper
+                        h1.h1-common 7 дней бесплатный доступ к базе занятий
+                    ._workout-types
+                        ._workout-types-item
+                            ._workout-types-title Пилатес
+                            ._workout-types-text здоровая осанка и сильное тело
+                        ._workout-types-item
+                            ._workout-types-title Стрейтчинг
+                            ._workout-types-text сексуальность и здоровье суставов
+                        ._workout-types-item
+                            ._workout-types-title Йога
+                            ._workout-types-text более 7 направлений
+                    btn.common-btn.js-open-modal(data-modal="modal-buy") Начать бесплатные занятия
+                    ._advantages#nav-1
+                        ._advantages-item
+                            ._advantages-icon
+                                +icon('play2')
+                            ._advantages-text Более 30 онлайн занятий в удобном формате
+                        ._advantages-item
+                            ._advantages-icon
+                                +icon('heart')
+                            ._advantages-text Гарантия обретения любви к спорту и своему телу
+                        ._advantages-item
+                            ._advantages-icon
+                                +icon('phone')
+                            ._advantages-text Доступ ко всем урокам в удобное время, в любом месте
+                        ._advantages-item
+                            ._advantages-icon
+                                +icon('yoga')
+                            ._advantages-text Занятия на любой уровень подготовки
+
+        section.messages
+            ._container.container
+                .messages-items
+                    ._item.-bottom-left.-black Без изнурительных тренировок и диет,<br>без марафонов и жестких ограничений &#9940
+                    ._item.-top-right.-yellow Только через любовь &#128154; к своему телу<br>Занимайтесь спортом в удовольствие! &#129496
+
+        section.training-types
+            ._img
+                +pictureAdaptive('tt', 'png', '703', '728')
+            ._container.container
+                ._inner
+                    h2.h2-common На платформе вам будут доступны следующие виды упражнений
+                    ._items
+                        ._item
+                            ._title Animal flow
+                            ._text развитие двигательного <br>интеллекта
+                        ._item
+                            ._title Хатха-йога
+                            ._text тренировка <br>концентрации ума
+                        ._item.-gray
+                            ._title Пилатес
+                            ._text здоровая осанка <br>и сильное тело
+                        ._item
+                            ._title Многофункциональный <br>тренинг
+                            ._text выносливость и тренировка для сердца
+                        ._item.-gray
+                            ._title Стрейтчинг
+                            ._text сексуальность <br>и здоровье суставов
+                        ._item
+                            ._title Табата йога
+                            ._text мощное укрепление <br>физической формы
+                        ._item.-gray
+                            ._title Виньяса флоу йога
+                            ._text баланс, грация и точность движений
+                        ._item.-gray
+                            ._title Инь-йога
+                            ._text спокойствие <br>и Релакс
+                        ._item.-gray
+                            ._title Бути йога
+                            ._text физическая <br>и эмоциональная разгрузка
+                        ._item
+                            ._title Пранаямы
+                            ._text (дыхательные упражнения) - развитие дыхательной <br>мускулатуры и естественная детоксикация организма
+                        ._item.-gray
+                            ._title Акро-йога
+                            ._text укрепление отношений с партнером, <br>обучение доверять и проводить время вместе!
+        section.time-section
+            .bg-wrapper
+                +pictureAdaptive('ts-bg', 'png', '100%', 'auto')
+            ._container.container
+                .messages-items.-top
+                    ._item.-bottom-right.-yellow Всего 20 минут в день &#129496; <br>способны изменить жизнь!
+                    ._item.-bottom-right.-purple Не упустите возможность самой выбирать когда и где заниматься.
+                .messages-items.-bottom
+                    ._item.-bottom-left.-gray.-sm &#129490; занимайся пока спит ребёнок
+                    ._item.-bottom-left.-gray.-sm &#127794; занимайся на свежем воздухе во дворе
+                    ._item.-bottom-left.-gray.-sm ☀️ создавай своё идеальное утро
+                    ._item.-bottom-left.-gray.-sm &#128187; занимайся практиками между работой из дома
+                    ._item.-bottom-left.-gray.-sm &#128106; проводи время с любимыми принято и полезно
+                    ._item.-bottom-left.-gray.-sm &#128564; настраивайся на эффективный сон
+        section.target-audience
+            .radial-bg
+            ._container.container
+                h2.h2-common.txt-center Тебе подойдут уроки, если
+                ._items
+                  ._item
+                      ._icon
+                          +icon('mother')
+                      ._text ты молодая мама, которая нуждается в улучшении физической формы
+                  ._item
+                      ._icon
+                          +icon('clock')
+                      ._text у тебя не хватает времени на зал, ты не готова тратить время на дорогу до него
+                  ._item
+                      ._icon
+                          +icon('spine')
+                      ._text ты имеешь проблемы с осанкой и хочешь это изменить
+                  ._item
+                      ._icon
+                          +icon('yoga')
+                      ._text ты стесняешься ходить в зал  и предпочитаешь занятия в уединенном месте
+                  ._item
+                      ._icon
+                          +icon('yoga2')
+                      ._text ты мечтаешь о хорошей растяжке или хочешь освоить гимнастический элемент (шпагат, мост, стойку на руках и пр.)
+                  ._item
+                      ._icon
+                          +icon('battery')
+                      ._text ты устала и нуждаешься в дополнительной энергии и красоте, хочешь улучшить свое самочувствие
+        section.what-u-get
+            .bg-wrapper
+                +pictureAdaptive('wug-bg', 'png', 1200, 859)
+            ._container.container
+                h2.h2-common Что вы получите от&nbsp;уроков
+                ._items
+                    ._item-wrapper
+                        ._item Улучшение состава тела. Повышение мышечной массы относительно жировой
+                    ._item-wrapper
+                        ._item Повысится ваше настроение, снизится уровень стресса
+                    ._item-wrapper
+                        ._item Повышение качества фигуры, подтянутый контур и красивую осанку
+                    ._item-wrapper
+                        ._item Повысится выносливость организма и укрепится общий иммунитет
+                    ._item-wrapper
+                        ._item Вы измените ваше мышление и восприятие своего тела, почувствуете уверенность в себе
+                    ._item-wrapper
+                        ._item Замедлите процесс старения
+        section.steps
+            .radial-bg
+            .radial-bg.-inverted
+            ._container.container
+                h2._title.h2-common
+                    ._title-box Всего
+                    ._title-num 4
+                    ._title-box простых шага к&nbsp;здоровому телу
+                ._items
+                    ._item
+                        ._item-num 1
+                        ._content.-first
+                            a(href="#").common-btn Подписаться на бесплатный доступ
+                            ._item-bottom
+                                ._item-or или
+                                btn.common-btn.-purple Продлить подписку
+                    ._item
+                        ._item-num 2
+                        ._content
+                            ._text Заниматься не менее 20-30 минут ежедневно или по 1 часу 2-3 раза в неделю
+                            ._icon
+                                +picture('yoga3', 'png', 72, 72)
+                    ._item
+                        ._item-num 3
+                        ._content
+                            ._text Не забываете правильно питаться, об этом вы можете ознакомится в моих статьях  #[a(href="#") Читать статьи]
+                            ._icon
+                                +picture('salad', 'png', 72, 72)
+                    ._item
+                        ._item-num 4
+                        ._content
+                            ._text Во всем нужна регулярность, дисциплина и правильный настрой. Знайте цель к которой идете. Поможет вам в этом наш подарок<br>
+                                a(href="#").common-btn.-purple Получить подарок
+
+                            ._icon
+                                +picture('gift', 'png', 72, 72)
+        section.gift
+            ._img
+                +picture('tracker', 'png', 710, 545)
+            ._container.container
+                ._content
+                    ._content-inner
+                        ._icon
+                            +picture('gift', 'png', 72, 72)
+                        ._title Подарок для&nbsp;твоей мотивации
+                        ._text Скачай трекер упражнений и следи за своим прогрессом
+                        a(href="#").common-btn Скачать подарок
+        section.process#nav-2
+            ._img.-left
+                +pictureNoWebpAdaptive('pr-1', 'gif', 388, 510)
+            ._img.-right
+                +pictureNoWebpAdaptive('pr-2', 'gif', 295, 387)
+            ._container.container
+                h2.h2-common.txt-center Как проходят занятия
+                ._items
+                    ._item
+                        ._num 1
+                        ._text Каждый видео-урок находится в личном кабинете, после регистрации на сайте для вас будет открыто 10 видео-занятий на 7 дней, чтобы открыть доступ ко всей базе занятий, стоит продлить абонемент
+                    ._item
+                        ._num 2
+                        ._text Занятия «BodySmart» направлены на развитие силы тела, концентрацию внимания, здоровую гибкость и улучшение самочувствия в целом
+                    ._item
+                        ._num 3
+                        ._text Большинство видеоуроков по 40-60 мин, оптимальное время для личной практики. В базе занятий вы найдёте тематические комплексы на освоение асан/гимнастических элементов и общеразвивающие практики.
+                    ._item
+                        ._num 4
+                        ._text База занятий постоянно пополняется новыми качественными занятиями: по 4 новых урока в неделю, в частности, по запросам. Все упражнения сопровождаются подробными и точными инструкциями, на большинство вопросов вы найдёте ответы внутри занятий. И все же, возможность задать дополнительно вопрос есть - в тг канале или под видео на сайте.3 занятия в неделю + 2 живых занятия в zoom
+                    ._item
+                        ._num 5
+                        ._text Конец каждого занятия сопровождается дыхательными упражнениями/медитацией/шавасаной/упражнениями из инь-йоги (то есть, в конце занятия мы работаем с парасимпатикой - умением расслабляться)
+        section.free-lessons
+            ._container.container
+                h2.h2-common.txt-center Посмотрите бесплатный урок прямо сейчас
+                ._items
+                    ._item
+                        ._title Мини урок по акро - йоге
+                        ._video
+                            +videoFancybox('fv1', 'mp4', 'fv1', 'png', 624, 403, 'fv-gal', true)
+                    ._item
+                        ._title Мини урок по табата - йоге
+                        ._video
+                            +videoFancybox('fv1', 'mp4', 'fv2', 'png', 624, 403, 'fv-gal', true)
+        section.subscriptions#nav-3
+            ._container.container
+                h2.h2-common.txt-center Выберите свой тариф
+                ._items
+                    ._item.-purple
+                        ._left
+                            ._item-title Новичок
+                        ._center
+                            p Ты делаешь первые шаги к тренировкам или уже имеешь опыт и хочешь проверить подходит ли тебе формат занятий.
+                            p Все что нужно сделать это заполнить короткую форму и получить доступ к платформе. Доступ бесплатный ко всем занятиям на 7 дней.
+                        ._right
+                            ._price Бесплатно
+                            a(href="#").common-btn Бесплатный доступ к урокам
+                    form._item.-black
+                        ._left
+                            ._item-title Продление абонемента
+                        ._center
+                            p Ты уже попробовала беспланые занятия и хочешь продлить свой доступ. Или хочешь оплатить занятия сразу?
+                            p Выбери длительность абонемента и узнай стоимость:
+                            .fg-wrapper.-radio
+                                +form-group-radio('sub-period[1]', 'sub-period', '1 месяц', false, true, '1 месяц', 'radio-common', 'custom-radio-label', true, '1000')
+                                +form-group-radio('sub-period[2]', 'sub-period', '3 месяца', true, true, '3 месяца', 'radio-common', 'custom-radio-label', true, '2000')
+                                +form-group-radio('sub-period[3]', 'sub-period', '6 месяцев', false, true, '6 месяцев', 'radio-common', 'custom-radio-label', true, '3000')
+                                +form-group-radio('sub-period[4]', 'sub-period', '1 год', false, true, '1 год', 'radio-common', 'custom-radio-label', true, '4000')
+                            .fg-wrapper.-promo
+                                +form-group('text', 'sub-promo', '', false, 'input-common', 'label-common', 'Есть промокод?')
+                                btn.common-btn.-purple.js-change-price(data-price="500") Ввести
+                        ._right
+                            ._price.js-price #[span 1190] ₽ / месяц
+                            ._info Стоимость одного занятия #[span 47&nbsp;₽]<br> — это меньше стоимости чашки кофе &#9749;
+                            a(href="#").common-btn Купить курс
+        section.about-me
+            ._img
+                +pictureAdaptive('am-bg', 'png', 588, 611)
+            ._container.container
+                ._content
+                    ._left
+                        .socials
+                            a(href="#")._item
+                                +icon('insta')
+                            a(href="#")._item
+                                +icon('vk')
+                        ._job Основатель школы онлайн-зал
+                        ._name Илина Белянская
+                        a(href="#").common-btn Связаться со мной по Whatsapp
+                    ._right
+                        p Веду преподавательскую деятельность с февраля 2019 года в Пятигорске. Начинала с небольших групп, теперь помимо них веду индивидуальные занятия в Пятигорске и онлайн по скайпу с женщинами по всему миру. Создаю различные уроки на YouTube, снимаю небольшие упражнения для инстаграма, а так же делюсь там своим настроением и мыслями с вами.Обучалась классической хатха-йоге в Москве и продолжаю обучаться: постоянно повышаю свою квалификацию, посещая лекции, семинары и различные обучения по йоге в России.
+                        p Люблю свой труд, люблю мотивировать своих подопечных и любоваться их прогрессом. Люблю отвечать на ваши вопросы и всегда прислушиваюсь к вашим пожеланиям.
+                ._quotes
+                    ._quotes-item.-left В практике йоги со мной отсутствуют мантры и молитвы, работаю на прямую с вашим телом и&nbsp;разумом.
+                    ._quotes-item.-right Работаю со сколиозами, грыжами спины, слабыми мыщцами, лишним весом, беспокойным умом и отсутствием гибкости тела.
+        section.results
+            h2.h2-common.txt-center Результаты учеников
+            .slider-wrapper.-results
+                .swiper-button.-prev
+                    +icon('arrow-left')
+                .swiper-button.-next
+                    +icon('arrow-right')
+                .results-slider.js-results-slider
+                    ._wrapper.swiper-wrapper
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs1','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs2','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs3','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs4','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs5','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs1','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs2','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs3','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs4','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs5','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs1','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs2','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs3','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs4','png', 340, 340, 'results')
+                        ._slide.swiper-slide
+                            +pictureFancybox('rs5','png', 340, 340, 'results')
+                .swiper-pagination
+        section.testimonials
+            h2.h2-common.txt-center О нас говорят
+            .slider-wrapper.-testimonials
+                .swiper-button.-prev
+                    +icon('arrow-left')
+                .swiper-button.-next
+                    +icon('arrow-right')
+                .testimonials-slider.js-testimonials-slider
+                    ._wrapper.swiper-wrapper
+                        ._slide.swiper-slide.js-play-video
+                            +video('ts-1', 340, 600, 'ts-1', true)
+                            ._name Ольга орлова
+                        ._slide.swiper-slide.js-play-video
+                            +video('ts-1', 340, 600, 'ts-2', true)
+                            ._name Ольга константинопольская
+                        ._slide.swiper-slide.js-play-video
+                            +video('ts-1', 340, 600, 'ts-3', true)
+                            ._name Ольга орлова
+                        ._slide.swiper-slide.js-play-video
+                            +video('ts-1', 340, 600, 'ts-1', true)
+                            ._name Ольга константинопольская
+                        ._slide.swiper-slide.js-play-video
+                            +video('ts-1', 340, 600, 'ts-2', true)
+                            ._name Ольга орлова
+                .swiper-pagination
+        section.faq#nav-5
+            h2.h2-common.txt-center Ответы на часто задаваемые вопросы
+            .slider-wrapper.-faq
+                .swiper-button.-prev
+                    +icon('arrow-left')
+                .swiper-button.-next
+                    +icon('arrow-right')
+                .faq-slider.js-faq-slider
+                    ._wrapper.swiper-wrapper
+                        ._slide.swiper-slide
+                            ._question
+                                ._question-avatar ?
+                                ._question-text «Живые занятия в zoom входят в подписку?»
+                            ._answer
+                                ._answer-avatar
+                                    +picture('a-ava', 'png', 46, 46)
+                                ._answer-text Таким образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке систем массового участия. Значимость этих проблем настолько очевидна
+                        ._slide.swiper-slide
+                            ._question
+                                ._question-avatar ?
+                                ._question-text «Есть ли противопоказания к практикам»?
+                            ._answer
+                                ._answer-avatar
+                                    +picture('a-ava', 'png', 46, 46)
+                                ._answer-text Таким образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать
+                        ._slide.swiper-slide
+                            ._question
+                                ._question-avatar ?
+                                ._question-text «Где задать вопрос и получить обратную связь?»
+                            ._answer
+                                ._answer-avatar
+                                    +picture('a-ava', 'png', 46, 46)
+                                ._answer-text Таким образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.
+                        ._slide.swiper-slide
+                            ._question
+                                ._question-avatar ?
+                                ._question-text «Живые занятия в zoom входят в подписку?»
+                            ._answer
+                                ._answer-avatar
+                                    +picture('a-ava', 'png', 46, 46)
+                                ._answer-text Таким образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке систем массового участия. Значимость этих проблем настолько очевидна
+                        ._slide.swiper-slide
+                            ._question
+                                ._question-avatar ?
+                                ._question-text «Есть ли противопоказания к практикам»?
+                            ._answer
+                                ._answer-avatar
+                                    +picture('a-ava', 'png', 46, 46)
+                                ._answer-text Таким образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать
+        section.form-section
+            ._container.container
+                form.common-form.-main
+                    h2.h2-common.txt-center Оставь свой вопрос
+                    ._inner
+                        .fg-wrapper.-two-childs
+                            +form-group('text', 'q-name', 'Представьтесь пожалуйста:', true, 'input-common', 'label-common', 'Твое имя*')
+                            +form-group('tel', 'q-tel', 'Номер телефона, чтобы мы могли вам перезвонить:', true, 'input-common', 'label-common', '+7(___) ___-__-__*')
+                        +form-group-textarea('q-question', 'Напишите свой вопрос:', true, '', 'input-common', 'label-common', 'Например, ...')
+                        ._bottom-wrapper
+                            +form-group-checkbox-allow('q-allow', true, true,'input-common', 'label-common')
+                            btn.common-btn(type="submit") Отправить
+        section.articles#nav-4
+            ._container.container
+                h2.h2-common.txt-center Немного полезных статей о здоровье
+                .slider-wrapper.-articles
+                    .swiper-button.-prev
+                        +icon('arrow-left')
+                    .swiper-button.-next
+                        +icon('arrow-right')
+                    .articles-slider.js-articles-slider
+                        ._wrapper.swiper-wrapper
+                            ._slide.swiper-slide.js-open-modal(data-modal="modal-article")
+                                ._img
+                                    +picture('as-1', 'png', 258, 400)
+                                    ._hover-btn
+                                        +icon('arrow-right')
+                                ._title 4 стратегии, которые помогут не&nbsp;бросить тренировки
+                            ._slide.swiper-slide.js-open-modal(data-modal="modal-article")
+                                ._img
+                                    +picture('as-2', 'png', 258, 400)
+                                    ._hover-btn
+                                        +icon('arrow-right')
+                                ._title 4 стратегии, которые помогут не&nbsp;бросить тренировки
+                            ._slide.swiper-slide.js-open-modal(data-modal="modal-article")
+                                ._img
+                                    +picture('as-3', 'png', 258, 400)
+                                    ._hover-btn
+                                        +icon('arrow-right')
+                                ._title 4 стратегии, которые помогут не&nbsp;бросить тренировки
+                            ._slide.swiper-slide.js-open-modal(data-modal="modal-article")
+                                ._img
+                                    +picture('as-4', 'png', 258, 400)
+                                    ._hover-btn
+                                        +icon('arrow-right')
+                                ._title 4 стратегии, которые помогут не&nbsp;бросить тренировки
+                            ._slide.swiper-slide.js-open-modal(data-modal="modal-article")
+                                ._img
+                                    +picture('as-1', 'png', 258, 400)
+                                    ._hover-btn
+                                        +icon('arrow-right')
+                                ._title 4 стратегии, которые помогут не&nbsp;бросить тренировки
+                            ._slide.swiper-slide.js-open-modal(data-modal="modal-article")
+                                ._img
+                                    +picture('as-2', 'png', 258, 400)
+                                    ._hover-btn
+                                        +icon('arrow-right')
+                                ._title 4 стратегии, которые помогут не&nbsp;бросить тренировки
+                            ._slide.swiper-slide.js-open-modal(data-modal="modal-article")
+                                ._img
+                                    +picture('as-3', 'png', 258, 400)
+                                    ._hover-btn
+                                        +icon('arrow-right')
+                                ._title 4 стратегии, которые помогут не&nbsp;бросить тренировки
+                            ._slide.swiper-slide.js-open-modal(data-modal="modal-article")
+                                ._img
+                                    +picture('as-4', 'png', 258, 400)
+                                    ._hover-btn
+                                        +icon('arrow-right')
+                                ._title 4 стратегии, которые помогут не&nbsp;бросить тренировки
+
+block footer
+    include ../components/footer
+
+
+
+
+
+
+

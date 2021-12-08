@@ -1,0 +1,129 @@
+.steps {
+  position: relative;
+  padding: 70px 0 50px;
+  overflow-x: hidden;
+  &__container {
+    max-width: 630px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+  &__title-box {
+    &:first-child {
+      margin-right: 30px;
+      @media (max-width: 767px) {
+        margin-right: 10px;
+      }
+    }
+    &:last-child {
+      margin-left: 30px;
+      @media (max-width: 767px) {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__title-num {
+    font-family: "Forum",serif;
+    font-size: 144px;
+    line-height: 1;
+    color: $purple;
+    @media (max-width: 767px) {
+      font-size: 72px;
+    }
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__item-num {
+    width: 60px;
+    height: 60px;
+    background-color: $middle-gray-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 20px;
+    border-radius: 50%;
+    color: purple;
+    flex-shrink: 0;
+    @media (max-width: 767px) {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }
+  &__content {
+    position: relative;
+    max-width: 405px;
+    &--first {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      & > .common-btn {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__item-bottom {
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+  }
+  &__item-or {
+    font-family: "Forum", serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #999999;
+    margin-right: 30px;
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
+  }
+  &__text {
+    padding: 30px 70px 30px 30px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    border-radius: 30px;
+    background-color: $middle-gray-bg;
+    @media (max-width: 767px) {
+      padding: 20px 40px 20px 20px;
+      font-size: 16px;
+      line-height: 27px;
+    }
+    .common-btn {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: -35px;
+    top: 20px;
+    @media (max-width: 767px) {
+      right: 15px;
+      top: auto;
+      bottom: 15px;
+    }
+    img {
+      @media (max-width: 767px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

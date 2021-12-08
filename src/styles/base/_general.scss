@@ -1,0 +1,84 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  &.modal-opened {
+    overflow-y: hidden;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+svg {
+  display: block;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li, button {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: underline solid transparent;
+  color: #000000;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    transition: 0.3s ease-in-out;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+p {
+  margin:0 0 20px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+table {
+  display: block;
+}
+
+tbody {
+  display: block;
+}
+
+tr {
+  display: block;
+}
+
+td {
+  display: block;
+}

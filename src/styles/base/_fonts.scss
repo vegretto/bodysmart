@@ -1,0 +1,38 @@
+//===========//
+//MIXIN FONTS
+//===========//
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
+  $src: null;
+
+  $extmods: (
+    eot: "?"
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-display: swap;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@include font-face("Museo Sans Cyrl", "../fonts/MuseoSansCyrl/MuseoSansCyrl-Light", 300, normal);
+@include font-face("Museo Sans Cyrl", "../fonts/MuseoSansCyrl/MuseoSansCyrl-Medium", 500, normal);
+@include font-face("Museo Sans Cyrl", "../fonts/MuseoSansCyrl/MuseoSansCyrl-Bold", 700, normal);
+@include font-face("Museo Sans Cyrl", "../fonts/MuseoSansCyrl/MuseoSansCyrl-Black", 900, normal);
+
+@include font-face("Forum", "../fonts/Forum/Forum-Regular", 400, normal);
+
+

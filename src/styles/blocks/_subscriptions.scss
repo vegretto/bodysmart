@@ -1,0 +1,118 @@
+.subscriptions {
+  padding: 50px 0;
+  @media (max-width: 767px) {
+    padding: 25px 0;
+  }
+  &__item {
+    padding: 55px 45px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+    @media (max-width: 767px) {
+      padding: 40px 20px;
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &--purple {
+      background: $dark-purple-gradient;
+      color: $white;
+    }
+    &--black {
+      background: $black-gradient;
+      color: $white;
+    }
+  }
+  &__item-title {
+    font-family: "Forum", serif;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+  &__left {
+    flex-basis: 280px;
+    @media (max-width: 991px) {
+      flex-basis: auto;
+      margin-bottom: 30px;
+    }
+  }
+  &__center {
+    flex-basis: 470px;
+    margin: 0 20px;
+    @media (max-width: 991px) {
+      flex-basis: auto;
+      margin: 0 0 30px 0;
+    }
+  }
+  &__right {
+    flex-basis: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 991px) {
+      flex-basis: auto;
+    }
+  }
+  &__price {
+    font-family: "Forum", serif;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  &__info {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: auto;
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    span {
+      padding: 5px 10px;
+      background-color: $purple;
+      border-radius: 30px;
+    }
+  }
+  .fg-wrapper--radio {
+    margin: 0 -5px 25px -5px;
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+  }
+  .form-group--radio {
+    margin: 0 5px;
+    @media (max-width: 600px) {
+      flex-basis: calc(50% - 10px);
+      margin: 10px 5px;
+    }
+  }
+  .fg-wrapper--promo {
+    background: rgba(203, 190, 218, 0.3);
+    border-radius: 15px;
+    padding: 5px;
+    max-width: 500px;
+    .form-group {
+      flex-grow: 1;
+      margin-bottom: 0;
+    }
+    .input-common {
+      background-color: transparent;
+      color: $white;
+      display: block;
+      height: 100%;
+      text-transform: uppercase;
+      &::placeholder {
+        color: $white;
+        text-transform: none;
+      }
+    }
+  }
+}
