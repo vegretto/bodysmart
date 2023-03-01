@@ -12,7 +12,7 @@ mixin pictureAdaptive(src, ext, width, height)
     source(data-srcset='img/' + src + '-sm.webp'  type="image/webp" media="(max-width: 767px)")
     source(data-srcset='img/' + src + '-sm.' + ext media="(max-width: 767px)")
     source(data-srcset='img/' + src + '.webp' type="image/webp")
-    img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=('img/' + src + '.' + ext) alt='image' width=width height=height)
+    img.lazyload(src='data:image/svg+xml,<svg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"><rect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/></svg>' data-src=('img/' + src + '.' + ext) alt='image' width=width height=height)
 
 mixin form-group(type, id, label, required, inputClass, labelClass, placeholder)
   div(class=`form-group`)
